@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402A735328DB40FA0026D820 /* SiteChangeTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A735228DB40FA0026D820 /* SiteChangeTreatment.swift */; };
 		A90E399E22BC76DB0016DFE8 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E399D22BC76DB0016DFE8 /* TimeInterval.swift */; };
 		A90E39A122BC773A0016DFE8 /* NightscoutUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E39A022BC773A0016DFE8 /* NightscoutUploader.swift */; };
 		A90E39A322BC782C0016DFE8 /* SyncCarbObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E39A222BC782C0016DFE8 /* SyncCarbObject.swift */; };
@@ -120,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		402A735228DB40FA0026D820 /* SiteChangeTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteChangeTreatment.swift; sourceTree = "<group>"; };
 		A90E399D22BC76DB0016DFE8 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		A90E39A022BC773A0016DFE8 /* NightscoutUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutUploader.swift; sourceTree = "<group>"; };
 		A90E39A222BC782C0016DFE8 /* SyncCarbObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncCarbObject.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				A90E399D22BC76DB0016DFE8 /* TimeInterval.swift */,
 				C1398D1F27C41E3D00416AD6 /* ProfileSet.swift */,
 				C1F7822727CD57A100C0919A /* OverrideTreament.swift */,
+				402A735228DB40FA0026D820 /* SiteChangeTreatment.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 			files = (
 				A993990322BC7095005E39D3 /* NightscoutService.swift in Sources */,
 				A934B6162358F42A00949C8B /* StoredDosingDecision.swift in Sources */,
+				402A735328DB40FA0026D820 /* SiteChangeTreatment.swift in Sources */,
 				A90E39A922BC7AD10016DFE8 /* Bundle.swift in Sources */,
 				A90E39A322BC782C0016DFE8 /* SyncCarbObject.swift in Sources */,
 				A934B61A2358F5FC00949C8B /* TemporaryScheduleOverride.swift in Sources */,

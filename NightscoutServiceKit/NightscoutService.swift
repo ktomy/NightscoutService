@@ -316,8 +316,32 @@ extension NightscoutService: RemoteDataService {
 
     public var pumpEventDataLimit: Int? { return 1000 }
 
-    public func uploadPumpEventData(_ stored: [PersistedPumpEvent], completion: @escaping (Result<Bool, Error>) -> Void) {
-        completion(.success(false))
+    public func uploadPumpEventData(_ events: [PersistedPumpEvent], completion: @escaping (Result<Bool, Error>) -> Void) {
+        guard hasConfiguration, let uploader = uploader else {
+            completion(.success(true))
+            return
+        }
+        guard !events.isEmpty else {
+            completion(.success(true))
+            return
+        }
+        
+        let siteChanges = events.filter { event in
+            return event.type == .siteChange
+        }.map { siteChangeEvent in
+            SiteChangeTreatment(event: siteChangeEvent)
+        }
+        
+        if !siteChanges.isEmpty {
+            uploader.upload(siteChanges) { (result) in
+                switch result {
+                case .failure(let error):
+                    completion(.failure(error))
+                case .success:
+                    completion(.success(true))
+                }
+            }
+        }
     }
 
     public var settingsDataLimit: Int? { return 400 }  // Each can be up to 2.5K bytes of serialized JSON, target ~1M or less
